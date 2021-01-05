@@ -1,0 +1,447 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="This website is selling variety of watches from variety of brands">
+<meta name="keywords" content="watches, time expert, apple, haylou, oris, swatch, casio, g-shock">
+<meta content="IE-edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<title>TIMEXPERT</title>
+<style>
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#ffff;	
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+nav{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-family: calibri;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	box-sizing: border-box;
+	padding: 10px 50px;
+	background-color:#ff3333;
+	box-shadow:2px 2px 12px rgba(0,0,0,0.05); 
+	z-index: 1;
+}
+ 
+.menu{
+	display: flex;
+}
+.menu li a{
+	padding: 10px 15px;
+	color:#fff;
+	font-size: 23px;
+	
+}
+.logo{
+	font-size: 25px;
+	font-weight: bold;
+	color:#292929;
+	font-family:Poppins;
+}
+.toggle{
+	display: none;
+}
+.active a,
+.menu li a:hover{
+	background-color:#292929;
+	color:#FFF!important;
+	font-weight: bold;
+	transition: all ease 0.4s;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+footer{
+padding:5px;
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+background: #1a1a1a;
+color:black;
+font-family: Arial;
+letter-spacing: 1px;
+}
+.zoom:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 2-7 */
+  transform: scale(1.2);
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+}
+
+.cart-button {
+	position: relative;
+	padding: 10px;
+	width: 200px;
+	height: 60px;
+	border: 0;
+	border-radius: 10px;
+	background-color: red;
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	transition: .3s ease-in-out;
+	overflow: hidden;
+}
+.cart-button:hover {
+	background-color: maroon;
+}
+.cart-button:active {
+	transform: scale(.9);
+}
+
+.cart-button .fa-shopping-cart {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left:-10%;
+	font-size: 2em;
+	color: black;
+	transform: translate(-50%,-50%);
+}
+.cart-button .fas fa-box {
+	position: absolute;
+	z-index: 1;
+	top: 40%;
+	left: 52%;
+	font-size: 1.2em;
+	color: black;
+	transform: translate(-50%,-50%);
+}
+.cart-button span {
+	position: absolute;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	font-size: 1.2em;
+	color: #fff;
+	transform: translate(-50%,-50%);
+}
+.cart-button span.add-to-cart {
+	opacity: 1;
+}
+.cart-button span.added {
+	opacity: 0;
+}
+
+.cart-button.clicked .fas fa-cart-plus {
+	animation: cart 1.5s ease-in-out forwards;
+}
+.cart-button.clicked .fa-box {
+	animation: box 1.5s ease-in-out forwards;
+}
+.cart-button.clicked span.add-to-cart {
+	animation: txt1 1.5s ease-in-out forwards;
+}
+.cart-button.clicked span.added {
+	animation: txt2 1.5s ease-in-out forwards;
+}
+@keyframes cart {
+	0% {
+		left: -10%;
+	}
+	40%, 60% {
+		left: 50%;
+	}
+	100% {
+		left: 110%;
+	}
+}
+@keyframes box {
+	0%, 40% {
+		top: -20%;
+	}
+	60% {
+		top: 40%;
+		left: 52%;
+	}
+	100% {
+		top: 40%;
+		left: 112%;
+	}
+}
+@keyframes txt1 {
+	0% {
+		opacity: 1;
+	}
+	20%, 100% {
+		opacity: 0;
+	}
+}
+@keyframes txt2 {
+	0%, 80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.youtube-link {
+	position: fixed;
+	left: 50px;
+	bottom: 20px;
+	color: #000;
+	text-decoration: none;
+	font-size: 12px;
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+</style>
+</head>
+<body link="white" alink="white" vlink="white">
+<h3 align="center">
+<section id="main">
+	<nav>
+	<a href="home.html" class="logo"><img src="image/logo.png"></a>
+	<div class="toggle"></div>
+	<ul class="menu">
+	<li><a href="home.html" >Home</a></li>
+<div class="dropdown">
+                 <li><a href="casio.html">brands</a></li>
+                 <i class="fa fa-caret-down"></i>
+                 </button>
+                <div class="dropdown-content">
+                <a href="casio.html">Casio</a>
+                <a href="swatch.html">Swatch</a>
+                <a href="tag.html">Tag Heuer</a>
+                <a href="apple.html">Apple</a>
+                <a href="haylou.html">Haylou</a>
+                <a href="omega.html">Omega</a>
+    </div> 
+</div>  
+                   <div class="dropdown">
+                 <li class="active"><a href="men.html">watches</a></li>
+                 <i class="fa fa-caret-down"></i>
+                 </button>
+                <div class="dropdown-content">
+                <a href="men.html">men</a>
+                <a href="women.html">women</a>
+    </div>
+  </div>
+
+
+                 <li><a href="about.html">about</a></li>
+                 <li><a href="contact.html">contact</a></li>		
+				 <li><a href="index.html">logout</a></li>
+	</ul>
+	</nav>
+</section>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+<div align="left">
+	<blockquote><blockquote><font style="font-family:courier;"><font size="4"><a href="men.html"><font color="black">WATCHES ></a></font><a href="men.html"><font color="black"> MEN ></a></font> ORIS</font></font></blockquote></blockquote>
+</div>
+
+
+<table align="center">
+	<tr>
+		<td bgcolor="F9F9F9"><img src="image/oris.png" alt="oris1"  width="500"  vspace="0" hspace="0">
+		
+		<td>
+			<blockquote><blockquote><blockquote>
+			<p align="center"><b><font face="arial"><font size="30">ORIS AQUIS </font></font></b></p>
+			<br><br>
+			<h1 align="center"><font face="arial">RM 7500</font></h1>
+			<br><br>
+			<p align="center"><button class="cart-button" align="center" onclick="myFunction()">
+				<span class="add-to-cart">Add to cart</span>
+				<span class="added">Added</span>
+				<i class="fas fa-cart-plus"></i>
+				<i class="fas fa-box"></i>
+				</button></blockquote></blockquote></blockquote>
+
+		</td>
+	</tr>
+</table>
+
+<div id="snackbar">YOU CAN GO THROUGH OUR SOCIAL MEDIA PAGE</div>
+
+<br><br><br><br>
+
+<table align="center">
+	
+	<tr>
+		<td bgcolor="F9F9F9"><blockquote><blockquote><img src="image/oris1.1.jpg" alt="oris1.1"  width="400"  vspace="0" hspace="0"></blockquote></blockquote></td>
+		
+		<td bgcolor="F9F9F9"><blockquote><blockquote><img src="image/oris1.2.png" alt="oris1.2"  width="400"  vspace="0" hspace="0"></blockquote></blockquote></td>
+	</tr>
+</table>
+
+<script>
+const cartButtons = document.querySelectorAll('.cart-button');
+
+cartButtons.forEach(button => {
+	button.addEventListener('click', cartClick);
+});
+
+function cartClick() {
+	let button = this;
+	button.classList.add('clicked');
+}
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+<br><br><br><br>
+
+<pre font face="arial"><font size="20">DESCRIPTION</font></pre>
+<p align="center"><blockquote><blockquote><blockquote><blockquote><font style="font-family:courier;" font color="#8c8c8c" font size="4">The Oris Aquis Date has a domed sapphire crystal which is two-sided anti-reflective. Of course, the grippy crown of this watch has a screw down construction. The luminous material used on the hands and indexes glows bluish under low light conditions and is named Super-LumiNova BG W9. Further on finishing: the sides of the watch casing are brushed, as are the sides of the bracelet and the centre links. The sides of the crown guard and the folding clasp are brushed as well, it is all very well-balanced. And all adding to the feeling that this watch is something serious.
+</font></blockquote></blockquote></blockquote></blockquote></p>
+
+<br><br><br><br>
+
+<pre font face="arial"><font size="20">TECHNICAL SPECS</font></pre>
+
+<br>
+
+<table align="center">
+	
+	<tr>
+		<td><blockquote><u><font face="arial">EXTERNAL DESIGN</font></u></blockquote></td>
+        <td><blockquote><u><font face="arial">INTERNAL DESIGN</font></u></blockquote></td>
+	
+    </tr>
+	
+	<tr>
+		<td font style="font-family:courier;" font color="#8c8c8c" font size="4">
+        	<dl>
+            	<dt>Case Material</dt>
+					  <dd>- Stainless steel </dd>
+            	<dt>Dial Color</dt>
+					  <dd>- Matte black</dd>
+					  <dd>- Glossy black</dd>
+					  <dd>- Blue.</dd><br>
+            	<dt>Strap/Bracelet</dt>
+					  <dd>- Leather strap, rubber strap, </dd>
+					  <dd> stainless steel bracelet. </dd><br>
+            	<dt>Dial Color</dt>
+					  <dd>- Matte black</dd>
+					  <dd>- Glossy black</dd> 
+					  <dd>- Blue.</dd>					  
+
+			</dl>
+        </td>
+
+        <td font style="font-family:courier;" font color="#8c8c8c" font size="4">
+        	<dl><br><br>
+            	<dt>Water Resistance</dt>
+					  <dd>- 300 meters. 
+
+			</dl>
+         </td>
+	</tr>
+	
+</table>
+<br>
+
+<footer>
+<font color="white">
+
+<a href="contact.html">Contact us</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="about.html">About Us</a>
+<br>
+  <a href="https://www.facebook.com/TIME-Expert-103038151748012" target="_blank"><img src="image/fb.png" border="0" height="100" width="100"  class="zoom" abbr title="facebook" ></a>
+  <a href="https://www.instagram.com/timexpert_/" target="_blank"><img src="image/ig.png" border="0" height="100" width="100"  class="zoom" abbr title="instagram" ></a>
+<br>
+This website are designed for IMD311 Group Assigment
+<br>
+All Right Reserved By Time Expert
+</font>
+</footer>
+
+</body>
+</html>
