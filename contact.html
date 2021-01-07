@@ -102,6 +102,38 @@ letter-spacing: 1px;
   -webkit-transform: scale(1.2); /* Safari 2-7 */
   transform: scale(1.2);
 }
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
 </style>
 </head>
 <body link="white" alink="white" vlink="white">
@@ -155,15 +187,34 @@ letter-spacing: 1px;
       <p><font face="arial">Facebook: TIME Expert</font></p>
       <p><font face="arial">Email: nadimnajmi12@gmail.com</font></p>
       <p><font face="arial">Contact Number: 0123456789</font></p>
-      <p><font face="arial">Address: 28, Jalan Sri Selayang, Taman Sri Selayang, 68100 Batu Caves, Selangor
-    28, Jalan Sri Selayang, Taman Sri Selayang, 68100 Batu Caves, Selangor</font></p>
-	</div>
+    </div>
 <br>
-    <p><font face="arial">If you have any question, CLICK the button below. Thank You</font></p>
-		<a href="https://docs.google.com/forms/d/1WT0AInag2ju0ROAG-aiOIvtu5uY-Mndqxh5foR30o_k/prefill" target="_blank">
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">ANY QUESTION</button>
-     </p>
-    </form>
+ <h3>Feedback Form</h3>
+
+<div class="container">
+  <form>
+    <label for="fname">Full Name </label>
+    <input type="text" id="fname" name="fullname" placeholder="Your name..">
+
+    <label for="lname">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="malaysia">Malaysia</option>
+      <option value="indonesia">Indonesia</option>
+      <option value="usa">USA</option>
+      <option value="singapore">Singapore</option>
+    </select>
+
+    <label for="subject">Feedback</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+  <input type="submit" value="Submit"></a>
+  </form>
+</div>
 
 
 <br><br><br>
